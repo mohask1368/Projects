@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #619ab8;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="search.MyList">
+   <children>
+      <Label fx:id="lbl_list" layoutX="255.0" layoutY="14.0" text="لیست داروها">
+         <font>
+            <Font name="B Titr Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_sثشقزا" layoutX="262.0" layoutY="109.0" mnemonicParsing="false" onAction="#showList" style="-fx-background-radius: 50;" text="جست و جو">
+         <font>
+            <Font name="B Kourosh" size="15.0" />
+         </font></Button>
+      <ListView fx:id="lv_showAll" layoutX="34.0" layoutY="170.0" prefHeight="200.0" prefWidth="528.0" />
+      <TextField fx:id="tf_drugName" alignment="CENTER" layoutX="232.0" layoutY="77.0" promptText="نام دارو" />
+   </children>
+</Pane>
