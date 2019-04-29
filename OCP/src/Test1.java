@@ -537,21 +537,21 @@ class Test1 {
 //        System.out.println(path2.normalize());
 
 
-        List<Integer> list = new ArrayList<>();
-        List<Integer> list2 = new ArrayList<>();
+//        List<Integer> list = new ArrayList<>();
+//        List<Integer> list2 = new ArrayList<>();
+//
+//        for(int i=0;i<=799;i++){
+//            list.add(i);
+//        }
+//
+//        Random randomizer = new Random();
+//        for (Integer j=0;j<=79;j++) {
+//            Integer random = list.get(randomizer.nextInt(list.size()));
+//            list2.add(random);
+//        }
 
-        for(int i=0;i<=799;i++){
-            list.add(i);
-        }
 
-        Random randomizer = new Random();
-        for (Integer j=0;j<=79;j++) {
-            Integer random = list.get(randomizer.nextInt(list.size()));
-            list2.add(random);
-        }
-
-
-
+        System.out.println( "sasan koskesh ast");
 
     }
 }
