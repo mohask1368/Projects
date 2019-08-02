@@ -39,7 +39,7 @@ public class Controller  {
 
             Stage managementStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane)loader.load(getClass().getResource("/manager/manager.fxml"));
+            Pane root = (Pane)loader.load(getClass().getResource("main/java/manager/manager.fxml"));
 
             manager.Manager manager = (manager.Manager) loader.getController();
 
@@ -48,7 +48,7 @@ public class Controller  {
             managementStage.setTitle("پنل مدیریت داروخانه");
             managementStage.show();
             managementStage.setResizable(false);
-            Image img = new Image("/images/icon.png");
+            Image img = new Image("main/java/images/icon.png");
             managementStage.getIcons().add(img);
 
 

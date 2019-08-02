@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Excel">
+    <CLASSES>
+      <root url="file://C:/Repository/Excel" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://C:/Repository/Excel" recursive="false" />
+  </library>
+</component>
