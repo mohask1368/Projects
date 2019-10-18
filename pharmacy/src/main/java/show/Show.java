@@ -83,13 +83,13 @@ public class Show implements Initializable {
         try {
             Stage listStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(getClass().getResource("/show/showAll.fxml"));
+            Pane root = (Pane) loader.load(getClass().getResource("/main/java/show/showAll.fxml"));
             Scene scene1 = new Scene(root);
             listStage.setScene(scene1);
             listStage.setTitle("لیست تمام داروها");
             listStage.show();
             listStage.setResizable(false);
-            Image img = new Image("/images/icon.png");
+            Image img = new Image("/main/java/images/icon.png");
             listStage.getIcons().add(img);
 
         } catch (Exception e) {
