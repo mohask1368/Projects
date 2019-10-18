@@ -39,7 +39,7 @@ public class Controller  {
 
             Stage managementStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane)loader.load(getClass().getResource("main/java/manager/manager.fxml"));
+            Pane root = (Pane)loader.load(getClass().getResource("/main/java/manager/manager.fxml"));
 
             manager.Manager manager = (manager.Manager) loader.getController();
 

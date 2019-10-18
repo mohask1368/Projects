@@ -37,7 +37,7 @@ public class Manager implements Initializable {
         try {
             Stage addStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(getClass().getResource("/add/add.fxml"));
+            Pane root = (Pane) loader.load(getClass().getResource("/main/java/add/add.fxml"));
 
 
             Scene scene1 = new Scene(root);
@@ -45,7 +45,7 @@ public class Manager implements Initializable {
             addStage.setTitle("اضافه کردن دارو");
             addStage.show();
             addStage.setResizable(false);
-            Image img = new Image("/images/icon.png");
+            Image img = new Image("/main/java/images/icon.png");
             addStage.getIcons().add(img);
 
 
@@ -78,7 +78,7 @@ public class Manager implements Initializable {
         try {
             Stage editStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(getClass().getResource("/edit/edit.fxml"));
+            Pane root = (Pane) loader.load(getClass().getResource("/main/java/edit/edit.fxml"));
 
 
             Scene scene1 = new Scene(root);
@@ -86,7 +86,7 @@ public class Manager implements Initializable {
             editStage.setTitle("ویرایش دارو");
             editStage.show();
             editStage.setResizable(false);
-            Image img = new Image("/images/icon.png");
+            Image img = new Image("/main/java/images/icon.png");
             editStage.getIcons().add(img);
 
 
@@ -118,7 +118,7 @@ public class Manager implements Initializable {
         try {
             Stage searchStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(getClass().getResource("/search/search.fxml"));
+            Pane root = (Pane) loader.load(getClass().getResource("/main/java/search/search.fxml"));
 
 
             Scene scene1 = new Scene(root);
@@ -126,7 +126,7 @@ public class Manager implements Initializable {
             searchStage.setTitle("جست و جوی دارو");
             searchStage.show();
             searchStage.setResizable(false);
-            Image img = new Image("/images/icon.png");
+            Image img = new Image("/main/java/images/icon.png");
             searchStage.getIcons().add(img);
 
 
@@ -158,7 +158,7 @@ public class Manager implements Initializable {
         try {
             Stage deleteStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(getClass().getResource("/delete/delete.fxml"));
+            Pane root = (Pane) loader.load(getClass().getResource("/main/java/delete/delete.fxml"));
 
 
             Scene scene1 = new Scene(root);
@@ -166,7 +166,7 @@ public class Manager implements Initializable {
             deleteStage.setTitle("حذف دارو");
             deleteStage.show();
             deleteStage.setResizable(false);
-            Image img = new Image("/images/icon.png");
+            Image img = new Image("/main/java/images/icon.png");
             deleteStage.getIcons().add(img);
 
 
@@ -197,7 +197,7 @@ public class Manager implements Initializable {
         try {
             Stage showStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane) loader.load(getClass().getResource("/show/show.fxml"));
+            Pane root = (Pane) loader.load(getClass().getResource("/main/java/show/show.fxml"));
 
 
             Scene scene1 = new Scene(root);
@@ -205,7 +205,7 @@ public class Manager implements Initializable {
             showStage.setTitle("نمایش دارو");
             showStage.show();
             showStage.setResizable(false);
-            Image img = new Image("/images/icon.png");
+            Image img = new Image("/main/java/images/icon.png");
             showStage.getIcons().add(img);
 
 
