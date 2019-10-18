@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         primaryStage.setTitle("Pharmacy");
@@ -24,7 +24,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-
         launch(args);
-
-    }}
+    }
+}

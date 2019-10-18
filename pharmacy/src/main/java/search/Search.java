@@ -25,7 +25,7 @@ public class Search implements Initializable {
     @FXML
     private TextField tf_drugCode;
     @FXML
-    public  TextField tf_drugName;
+    public TextField tf_drugName;
     @FXML
     private Button btn_return;
     @FXML
@@ -34,15 +34,9 @@ public class Search implements Initializable {
     private Button btn_searchByName;
 
 
-
     public void searchById(ActionEvent event) {
-
-
         if (!tf_drugCode.getText().isEmpty()) {
-
             Drug drug = new Drug();
-
-
             SessionFactory sf = new Configuration().configure("/config/ProjectConfig.xml").buildSessionFactory();
             Session session = sf.getCurrentSession();
             Transaction tx = session.beginTransaction();
@@ -52,58 +46,37 @@ public class Search implements Initializable {
                 tx.commit();
 
                 if (drug != null) {
-
                     JOptionPane.showMessageDialog(null, drug.toString());
-
                 } else {
                     JOptionPane.showMessageDialog(null, "دارویی با کد وارد شده یافت نشد !!!");
-
                 }
-
-
-            } catch (Exception e)
-
-            {
+            } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "لطفا فقط عدد وارد کنید  !!!");
             } finally {
                 session.close();
-
             }
 
         } else {
             JOptionPane.showMessageDialog(null, "لطفا فیلد را پر کنید ! ");
-
         }
 
     }
 
     @FXML
     public void searchByName(ActionEvent event) {
-
-
-                    myListSection();
-
-            }
-
-
-
-
+        myListSection();
+    }
 
 
     public void return2ManagementSection() {
 
         Controller controller = new Controller();
-
         try {
-
             Stage stage = (Stage) btn_return.getScene().getWindow();
             stage.close();
             controller.managementSection();
-
-
         } catch (Exception e) {
             e.printStackTrace();
-
         }
     }
 
@@ -123,8 +96,6 @@ public class Search implements Initializable {
             Image img = new Image("/images/icon.png");
             listStage.getIcons().add(img);
 
-
-
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("khata dar MyList section");
@@ -135,11 +106,7 @@ public class Search implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-
-
     }
-
 
 
 }

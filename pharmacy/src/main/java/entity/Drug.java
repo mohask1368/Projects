@@ -6,7 +6,8 @@ import javax.persistence.*;
 @Entity
 public class Drug {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String price;
@@ -47,6 +48,6 @@ public class Drug {
 
     @Override
     public String toString() {
-        return "  کد = " + id + "\n"+  "  نام =" + name +  "\n" +  "  قیمت =" + price + "\n"+   "  موارد مصرف =" +   useCase   ;
+        return "  کد = " + id + "\n" + "  نام =" + name + "\n" + "  قیمت =" + price + "\n" + "  موارد مصرف =" + useCase;
     }
 }

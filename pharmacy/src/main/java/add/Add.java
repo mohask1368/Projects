@@ -37,80 +37,60 @@ public class Add implements Initializable {
     private Button btn_clear;
 
 
-
-
     @FXML
     public void add2DataBase(ActionEvent event) throws SQLException {
 
-        if ( !tf_drugName.getText().isEmpty() && !tf_drugPrice.getText().isEmpty() && !ta_drugUseCase.getText().isEmpty()) {
+        if (!tf_drugName.getText().isEmpty() && !tf_drugPrice.getText().isEmpty() && !ta_drugUseCase.getText().isEmpty()) {
 
 
-            Drug drug=new Drug();
+            Drug drug = new Drug();
+            drug.setName(tf_drugName.getText().toString());
+            drug.setPrice(tf_drugPrice.getText().toString());
+            drug.setUseCase(ta_drugUseCase.getText().toString());
 
-        drug.setName(tf_drugName.getText().toString());
+            SessionFactory sf = new Configuration().configure("/config/ProjectConfig.xml").buildSessionFactory();
+            Session session = sf.getCurrentSession();
+            Transaction tx = session.beginTransaction();
+            session.save(drug);
+            tx.commit();
+            session.close();
+            JOptionPane.showMessageDialog(null, "دارو با موفقیت اضافه شد");
 
-        drug.setPrice(tf_drugPrice.getText().toString());
-
-        drug.setUseCase(ta_drugUseCase.getText().toString());
-
-
-        SessionFactory sf = new Configuration().configure("/config/ProjectConfig.xml").buildSessionFactory();
-        Session session = sf.getCurrentSession();
-        Transaction tx = session.beginTransaction();
-        session.save(drug);
-        tx.commit();
-        session.close();
-        JOptionPane.showMessageDialog(null,"دارو با موفقیت اضافه شد");
-
-    }else {
+        } else {
             JOptionPane.showMessageDialog(null, "لطفا تمام فیلد هارا پر کنید ! ");
-
         }
     }
 
 
+    public void return2ManagementSection() {
 
-
-
-
-    public void return2ManagementSection(){
-
-        Controller controller=new Controller();
-
+        Controller controller = new Controller();
         try {
-
             Stage stage = (Stage) btn_return.getScene().getWindow();
             stage.close();
             controller.managementSection();
-
-
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
 
         }
     }
 
-    public void clear(ActionEvent event){
-
+    public void clear(ActionEvent event) {
         tf_drugName.clear();
         tf_drugPrice.clear();
         ta_drugUseCase.clear();
-
-
     }
 
-    public void priceValidation(){
-        if (!tf_drugPrice.getText().matches("[0-9]+") && (tf_drugPrice.getText() != null || tf_drugPrice.getText() != "")){
+    public void priceValidation() {
+        if (!tf_drugPrice.getText().matches("[0-9]+") && (tf_drugPrice.getText() != null || tf_drugPrice.getText() != "")) {
             tf_drugPrice.clear();
             JOptionPane.showMessageDialog(null, " لطفا فقط عدد وارد کنید ! ");
-
         }
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
     }
 
 

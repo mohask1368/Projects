@@ -21,8 +21,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-
-public class Show implements Initializable{
+public class Show implements Initializable {
 
     @FXML
     private TextField tf_drugCode;
@@ -36,65 +35,55 @@ public class Show implements Initializable{
     private Button btn_go2showAll;
 
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
     }
 
     public void return2ManagementSection() {
 
-        Controller controller=new Controller();
-
+        Controller controller = new Controller();
         try {
 
             Stage stage = (Stage) btn_return.getScene().getWindow();
             stage.close();
             controller.managementSection();
 
-
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-
         }
 
     }
 
-    public void showDataBase(ActionEvent event){
+    public void showDataBase(ActionEvent event) {
         Drug drug = new Drug();
 
-        SessionFactory sf=new Configuration().configure("/config/ProjectConfig.xml").buildSessionFactory();
-        Session session=sf.getCurrentSession();
-        Transaction tx=session.beginTransaction();
+        SessionFactory sf = new Configuration().configure("/config/ProjectConfig.xml").buildSessionFactory();
+        Session session = sf.getCurrentSession();
+        Transaction tx = session.beginTransaction();
         try {
-            drug = session.get(Drug.class,Integer.valueOf((tf_drugCode.getText().toString())));
-            if (drug!=null){
+            drug = session.get(Drug.class, Integer.valueOf((tf_drugCode.getText().toString())));
+            if (drug != null) {
                 ta_show.setText(drug.toString());
                 tx.commit();
 
-            }else {
-                JOptionPane.showMessageDialog(null,"دارویی با کد وارد شده یافت نشد !!!");
-
+            } else {
+                JOptionPane.showMessageDialog(null, "دارویی با کد وارد شده یافت نشد !!!");
             }
 
-
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(null,"لطفا فقط عدد وارد کنید  !!!");
-        }finally {
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "لطفا فقط عدد وارد کنید  !!!");
+        } finally {
             session.close();
-
         }
-
 
     }
 
-    public void showAllSection(){
+    public void showAllSection() {
 
         try {
-
             Stage listStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane)loader.load(getClass().getResource("/show/showAll.fxml"));
+            Pane root = (Pane) loader.load(getClass().getResource("/show/showAll.fxml"));
             Scene scene1 = new Scene(root);
             listStage.setScene(scene1);
             listStage.setTitle("لیست تمام داروها");
@@ -103,14 +92,11 @@ public class Show implements Initializable{
             Image img = new Image("/images/icon.png");
             listStage.getIcons().add(img);
 
-
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             System.out.println("khata dar show all section");
         }
 
     }
-
-
 
 }

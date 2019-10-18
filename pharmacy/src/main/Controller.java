@@ -14,9 +14,7 @@ import javafx.stage.Stage;
 import javax.swing.*;
 import java.io.IOException;
 
-public class Controller  {
-
-
+public class Controller {
 
     @FXML
     private TextField tf_username;
@@ -29,21 +27,15 @@ public class Controller  {
     @FXML
     private ImageView iv_status;
 
-
-
-
-    public void managementSection(){
+    public void managementSection() {
 
         try {
-
-
             Stage managementStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
-            Pane root = (Pane)loader.load(getClass().getResource("/main/java/manager/manager.fxml"));
-
+            Pane root = (Pane) loader.load(getClass().getResource("/main/java/manager/manager.fxml"));
             manager.Manager manager = (manager.Manager) loader.getController();
 
-            Scene scene=new Scene(root);
+            Scene scene = new Scene(root);
             managementStage.setScene(scene);
             managementStage.setTitle("پنل مدیریت داروخانه");
             managementStage.show();
@@ -51,32 +43,29 @@ public class Controller  {
             Image img = new Image("main/java/images/icon.png");
             managementStage.getIcons().add(img);
 
-
-        } catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
     @FXML
-    public void loginCheker(javafx.event.ActionEvent event){
+    public void loginCheker(javafx.event.ActionEvent event) {
 
-    try {
+        try {
 
-        if (true){
-            Stage stage = (Stage) this.btn_login.getScene().getWindow();
-            stage.close();
-            managementSection();
-        }else {
-            JOptionPane.showMessageDialog(null,"اطلاعات وارد شده صحیح نیست !!!");
+            if (true) {
+                Stage stage = (Stage) this.btn_login.getScene().getWindow();
+                stage.close();
+                managementSection();
+            } else {
+                JOptionPane.showMessageDialog(null, "اطلاعات وارد شده صحیح نیست !!!");
+            }
+
+        } catch (Exception e1) {
+            e1.printStackTrace();
         }
-
-    }catch (Exception e1){
-
-        e1.printStackTrace();    }
-
     }
-
 
 }
 

@@ -30,26 +30,20 @@ public class ShowAll implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
     }
-
 
     public void show(ActionEvent event) {
 
+        SessionFactory sf = new Configuration().configure("/config/ProjectConfig.xml").buildSessionFactory();
+        Session session = sf.getCurrentSession();
+        Transaction tx = session.beginTransaction();
 
+        Query query = session.createQuery("FROM Drug");
+        drugs = query.list();
+        ObservableList obs = FXCollections.observableArrayList(drugs);
+        lv_showAll.setItems(obs);
 
-            Drug drug = new Drug();
-            SessionFactory sf = new Configuration().configure("/config/ProjectConfig.xml").buildSessionFactory();
-            Session session = sf.getCurrentSession();
-            Transaction tx = session.beginTransaction();
-
-            Query query = session.createQuery("FROM Drug");
-            drugs = query.list();
-            ObservableList obs = FXCollections.observableArrayList(drugs);
-            lv_showAll.setItems(obs);
-
-
-            tx.commit();
-            session.close();
-        }
+        tx.commit();
+        session.close();
     }
+}

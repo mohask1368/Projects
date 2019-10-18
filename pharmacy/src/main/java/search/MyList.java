@@ -27,17 +27,14 @@ public class MyList implements Initializable {
     @FXML
     private Button btn_show;
     @FXML
-    public  TextField tf_drugName;
-
+    public TextField tf_drugName;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-
     }
 
-    public void showList(ActionEvent event){
+    public void showList(ActionEvent event) {
 
         if (!tf_drugName.getText().isEmpty()) {
 
@@ -49,23 +46,17 @@ public class MyList implements Initializable {
             Transaction tx = session.beginTransaction();
 
             try {
-
-
                 Criteria criteria = session.createCriteria(Drug.class);
-
                 Criterion ilike = Restrictions.ilike("name", "%" + tf_drugName.getText().toString() + "%");
                 criteria.add(ilike);
                 List<Drug> drugs = criteria.list();
                 ObservableList obs = FXCollections.observableArrayList(drugs);
                 lv_showAll.setItems(obs);
 
-
                 tx.commit();
                 session.close();
 
                 if (drugs != null && drugs.size() > 0) {
-
-
                 } else {
                     JOptionPane.showMessageDialog(null, "دارویی با این نام یافت نشد");
                 }
@@ -84,10 +75,7 @@ public class MyList implements Initializable {
         }
     }
 
-
-
-
-    }
+}
 
 
 

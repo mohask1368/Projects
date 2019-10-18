@@ -39,7 +39,6 @@ public class Manager implements Initializable {
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(getClass().getResource("/main/java/add/add.fxml"));
 
-
             Scene scene1 = new Scene(root);
             addStage.setScene(scene1);
             addStage.setTitle("اضافه کردن دارو");
@@ -48,28 +47,21 @@ public class Manager implements Initializable {
             Image img = new Image("/main/java/images/icon.png");
             addStage.getIcons().add(img);
 
-
         } catch (IOException e) {
             e.printStackTrace();
-
         }
 
     }
 
 
     public void addDrug(ActionEvent event) {
-
-
         try {
-
             Stage stage = (Stage) this.btn_add.getScene().getWindow();
             stage.close();
             addSection();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
 
@@ -80,7 +72,6 @@ public class Manager implements Initializable {
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(getClass().getResource("/main/java/edit/edit.fxml"));
 
-
             Scene scene1 = new Scene(root);
             editStage.setScene(scene1);
             editStage.setTitle("ویرایش دارو");
@@ -88,28 +79,21 @@ public class Manager implements Initializable {
             editStage.setResizable(false);
             Image img = new Image("/main/java/images/icon.png");
             editStage.getIcons().add(img);
-
-
         } catch (IOException e) {
             e.printStackTrace();
-
         }
 
     }
 
     public void editDrug(ActionEvent event) {
 
-
         try {
-
             Stage stage = (Stage) this.btn_edit.getScene().getWindow();
             stage.close();
             editSection();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
 
@@ -120,7 +104,6 @@ public class Manager implements Initializable {
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(getClass().getResource("/main/java/search/search.fxml"));
 
-
             Scene scene1 = new Scene(root);
             searchStage.setScene(scene1);
             searchStage.setTitle("جست و جوی دارو");
@@ -129,26 +112,21 @@ public class Manager implements Initializable {
             Image img = new Image("/main/java/images/icon.png");
             searchStage.getIcons().add(img);
 
-
         } catch (IOException e) {
             e.printStackTrace();
-
         }
 
     }
 
     public void searchDrug(ActionEvent event) {
 
-
         try {
-
             Stage stage = (Stage) this.btn_search.getScene().getWindow();
             stage.close();
             searchSection();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
     }
 
@@ -160,7 +138,6 @@ public class Manager implements Initializable {
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(getClass().getResource("/main/java/delete/delete.fxml"));
 
-
             Scene scene1 = new Scene(root);
             deleteStage.setScene(scene1);
             deleteStage.setTitle("حذف دارو");
@@ -169,27 +146,21 @@ public class Manager implements Initializable {
             Image img = new Image("/main/java/images/icon.png");
             deleteStage.getIcons().add(img);
 
-
         } catch (IOException e) {
             e.printStackTrace();
-
         }
 
     }
 
     public void deleteDrug(ActionEvent event) {
 
-
         try {
-
             Stage stage = (Stage) this.btn_delete.getScene().getWindow();
             stage.close();
             deleteSection();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
 
     public void showSection() {
@@ -199,7 +170,6 @@ public class Manager implements Initializable {
             FXMLLoader loader = new FXMLLoader();
             Pane root = (Pane) loader.load(getClass().getResource("/main/java/show/show.fxml"));
 
-
             Scene scene1 = new Scene(root);
             showStage.setScene(scene1);
             showStage.setTitle("نمایش دارو");
@@ -208,19 +178,15 @@ public class Manager implements Initializable {
             Image img = new Image("/main/java/images/icon.png");
             showStage.getIcons().add(img);
 
-
         } catch (IOException e) {
             e.printStackTrace();
-
         }
 
     }
 
     public void showDrug(ActionEvent event) {
 
-
         try {
-
             Stage stage = (Stage) this.btn_show_all.getScene().getWindow();
             stage.close();
             showSection();
@@ -228,22 +194,17 @@ public class Manager implements Initializable {
             e.printStackTrace();
         }
 
-
     }
 
 
     public void printAllDrug(ActionEvent event) throws IOException {
 
-
         Print.print();
-
-
     }
 
     public void addOnMouseEntered() {
         btn_add.setEffect(new DropShadow());
         btn_add.setFont(Font.font("b titr"));
-
     }
 
     public void addOnMouseExited() {
@@ -254,7 +215,6 @@ public class Manager implements Initializable {
     public void editOnMouseEntered() {
         btn_edit.setEffect(new DropShadow());
         btn_edit.setFont(Font.font("b titr"));
-
     }
 
     public void editOnMouseExited() {
@@ -305,6 +265,5 @@ public class Manager implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
     }
 }
