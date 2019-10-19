@@ -1,0 +1,7 @@
+#pane{
+    -fx-background-image: url("/main/java/show/show.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-position: center center;
+
+  
+}

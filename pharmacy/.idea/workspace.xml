@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fb5e2010-8288-4d71-b7fa-b6a69a973bff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/add/Add.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/add/Add.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/delete/Delete.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/delete/Delete.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edit/Edit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edit/Edit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Drug.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Drug.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/manager/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/manager/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/search/MyList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/search/MyList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/search/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/search/Search.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/show/Show.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/show/Show.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/show/ShowAll.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/show/ShowAll.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +194,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -193,6 +205,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="remove extra code and cleaning" />
     <option name="LAST_COMMIT_MESSAGE" value="remove extra code and cleaning" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/manager/Manager.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>
